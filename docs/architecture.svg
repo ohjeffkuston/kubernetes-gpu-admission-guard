@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <rect width="1400" height="760" fill="#f8fafc"/>
+  <text x="700" y="70" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#0f172a">Kubernetes GPU Admission Guard</text>
+  <text x="700" y="108" text-anchor="middle" font-family="Arial" font-size="18" fill="#475569">Evidence before scarce accelerator capacity is consumed</text>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <g font-family="Arial">
+    <rect x="70" y="230" rx="18" width="250" height="210" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+    <text x="195" y="278" text-anchor="middle" font-size="23" font-weight="700" fill="#0c4a6e">Evidence Inputs</text>
+    <text x="100" y="325" font-size="18" fill="#334155">• AI workload request</text>
+    <text x="100" y="360" font-size="18" fill="#334155">• GPU pool inventory</text>
+    <text x="100" y="395" font-size="18" fill="#334155">• Quota + queue metrics</text>
+
+    <rect x="435" y="185" rx="18" width="530" height="300" fill="#ffffff" stroke="#7c3aed" stroke-width="4"/>
+    <text x="700" y="240" text-anchor="middle" font-size="25" font-weight="700" fill="#4c1d95">Deterministic Policy Engine</text>
+    <rect x="485" y="280" rx="12" width="190" height="130" fill="#f3e8ff"/>
+    <text x="580" y="322" text-anchor="middle" font-size="19" font-weight="700" fill="#581c87">Eligibility</text>
+    <text x="580" y="357" text-anchor="middle" font-size="16" fill="#475569">DRA • class • memory</text>
+    <text x="580" y="382" text-anchor="middle" font-size="16" fill="#475569">driver • health</text>
+    <rect x="725" y="280" rx="12" width="190" height="130" fill="#ede9fe"/>
+    <text x="820" y="322" text-anchor="middle" font-size="19" font-weight="700" fill="#581c87">Guardrails</text>
+    <text x="820" y="357" text-anchor="middle" font-size="16" fill="#475569">quota • queue SLO</text>
+    <text x="820" y="382" text-anchor="middle" font-size="16" fill="#475569">headroom • cost</text>
+
+    <rect x="1080" y="230" rx="18" width="250" height="210" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="1205" y="278" text-anchor="middle" font-size="23" font-weight="700" fill="#14532d">Decision Evidence</text>
+    <text x="1110" y="325" font-size="18" fill="#334155">• ADMIT / WARN</text>
+    <text x="1110" y="360" font-size="18" fill="#334155">• QUEUE / BLOCK</text>
+    <text x="1110" y="395" font-size="18" fill="#334155">• Reasons + actions</text>
+
+    <line x1="320" y1="335" x2="425" y2="335" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <line x1="965" y1="335" x2="1070" y2="335" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="385" y="565" rx="16" width="630" height="100" fill="#fff7ed" stroke="#f97316" stroke-width="3"/>
+    <text x="700" y="605" text-anchor="middle" font-size="21" font-weight="700" fill="#9a3412">Human-approved enforcement boundary</text>
+    <text x="700" y="638" text-anchor="middle" font-size="17" fill="#475569">No cluster mutation • signed evidence • versioned policy • auditable outcome</text>
+    <line x1="700" y1="485" x2="700" y2="555" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  </g>
+</svg>

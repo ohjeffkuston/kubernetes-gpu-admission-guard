@@ -1,0 +1,18 @@
+{
+  "policy": {
+    "require_dra": true,
+    "allowed_device_classes": ["gpu-cost-optimized", "gpu-performance"],
+    "min_free_gpu_fraction": 0.25,
+    "max_cost_per_gpu_hour": 4.0,
+    "max_dcgm_error_rate": 0.01
+  },
+  "cluster": {
+    "nodes": [
+      {"name": "gpu-a-1", "device_class": "gpu-cost-optimized", "total_gpus": 8, "allocated_gpus": 4, "gpu_memory_gib": 80, "cost_per_gpu_hour": 3.2, "driver_ready": true, "healthy": true},
+      {"name": "gpu-a-2", "device_class": "gpu-cost-optimized", "total_gpus": 8, "allocated_gpus": 7, "gpu_memory_gib": 80, "cost_per_gpu_hour": 3.2, "driver_ready": true, "healthy": true}
+    ]
+  },
+  "workload": {"name": "batch-embedding-refresh", "tenant": "search", "replicas": 2, "gpus_per_replica": 2, "required_gpu_memory_gib": 40, "device_class": "gpu-cost-optimized", "uses_dra": true, "max_start_delay_seconds": 600},
+  "tenant_quota": {"max_gpus": 12, "used_gpus": 6},
+  "metrics": {"queue_p95_seconds": 240, "pending_workloads": 2, "dcgm_error_rate": 0.0}
+}
